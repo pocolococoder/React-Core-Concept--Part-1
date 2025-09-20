@@ -3,33 +3,44 @@ import './App.css'
 import Todo from './Todo'
 import Actor from './Actor'
 import Singer from './Singer'
+import Library from './Library'
 
 
 
 function App() {
 
 
+   const books = [
+    {id: 1, name: 'Physics', price: 350},
+    {id: 2, name: 'Chemistry', price: 250},
+    {id: 3, name: 'Bangla', price: 150},
+    {id: 4, name: 'English', price: 650},
+   ]
+
   // const actors = ['Nivin',"Fahadh","Dulquer","Tovino"]
 
-  const singers = [
-    {id: 1, name:'Tahsan', age: 68},
-    {id: 2, name:'Atif', age: 48},
-    {id: 2, name:'Hridoy', age: 98}
-  ]
+  // const singers = [
+  //   {id: 1, name:'Tahsan', age: 68},
+  //   {id: 2, name:'Atif', age: 48},
+  //   {id: 2, name:'Hridoy', age: 98}
+  // ]
 
   // const time = 50;
  return(
     <>
 
       <h1>React Core Concepts</h1>
+      <Library books={books}></Library>
+
+
 
       {/* {
         actors.map(actor=><Actor actor={actor}></Actor>)
       } */}
 
-      {
+      {/* {
         singers.map(singer=><Singer key={singer.id} singer={singer}></Singer>)
-      }
+      } */}
 
 
 
