@@ -1,58 +1,48 @@
-// export default function ToDo({task,isDone}){
+// function Todo({task,isDone}){
 //     return(
-//         <div>
-//             <h3>Task : {task}</h3>
-//         </div>
         
+//             <li>Task: {task} </li>
+     
 //     )
 // }
 
+// export default Todo
 
-// export default function ToDo({task,isDone,duration}){
+// export default function Todo({task,isDone}){
 //     if(isDone===true){
-//         return(
-//             <div>
-//              <h3>Done : {task} Duration: {duration}</h3>
-//         </div>
-//         )
+//         return <h2>Done: {task}</h2>
 //     }
 //     else{
-//         return (
-//             <li>Pending: {task}</li>
-//         )
+//         return <h2>pending: {task}</h2>
 //     }
 // }
 
+// export default function Todo({task,isDone,time=0}){
+//     if(isDone===true){
+//         return <h2>Done: {task} time: {time}</h2>
+//     }
+    
+//         return <h2>pending: {task} Time: {time}</h2>
+    
+// }
 
+// export default function Todo({task,isDone,time=0}){
+//     return isDone ? <li>Done: {task} {time}</li> : <li>Not Done: {task} {time}</li>
 
-    //conditional rendering: 3 ternary
+// }
 
-    // export default function ToDo({task,isDone,duration}){
-    //     return isDone ? <li>Done : {task} time: {duration}</li> : <li>Not Done : {task}</li>
-    // }
+export default function Todo({task,isDone,time=0}){
+    let listItem;
 
-
-    //conditional rendering 
-
-    //  export default function ToDo({task,isDone,duration}){
-    //     return isDone && <li>Done : {task} Time : {duration}</li>
-    // }
-
-
-    //  export default function ToDo({task,isDone,duration}){
-    //     return isDone && <li> Done : {task} Time : {duration}</li>
-    // }
-
-
-    export default function ToDo({task,isDone,duration}){
-    let listItem ;
+    const displayTime = time? time : 100;
 
     if(isDone===true){
-        listItem = <li>Done : {task} Duration : {duration}</li>
+        listItem = <li>Done: {task} {time? 'Done' : "Not Done Yet!"}</li>
     }
     else{
-        listItem =  <li>Pending : {task} Duration: {null}</li>
+        listItem = <li>Not Done: {task} {time}</li>
     }
     return listItem;
+        
+    
 }
-
