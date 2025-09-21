@@ -4,18 +4,21 @@ import Todo from './Todo'
 import Actor from './Actor'
 import Singer from './Singer'
 import Library from './Library'
+import Counter from './Counter'
+import Batsman from './Batsman'
+import Bowler from './Bowler'
 
 
 
 function App() {
 
 
-   const books = [
-    {id: 1, name: 'Physics', price: 350},
-    {id: 2, name: 'Chemistry', price: 250},
-    {id: 3, name: 'Bangla', price: 150},
-    {id: 4, name: 'English', price: 650},
-   ]
+  //  const books = [
+  //   {id: 1, name: 'Physics', price: 350},
+  //   {id: 2, name: 'Chemistry', price: 250},
+  //   {id: 3, name: 'Bangla', price: 150},
+  //   {id: 4, name: 'English', price: 650},
+  //  ]
 
   // const actors = ['Nivin',"Fahadh","Dulquer","Tovino"]
 
@@ -26,11 +29,50 @@ function App() {
   // ]
 
   // const time = 50;
+
+  // function handleClick(){
+  //   alert("clicked - 1")
+  // }
+
+  // const  handleClick3 = ()=>{
+  //   alert('Click-3')
+  // } 
+
+  // const handleClick5 = (num)=>{
+  //   let newNum = num+10;
+  //   alert(newNum);
+  // }
+
+
  return(
     <>
 
       <h1>React Core Concepts</h1>
-      <Library books={books}></Library>
+      <Bowler></Bowler>
+      {/* <Batsman></Batsman> */}
+
+      {/* <Counter></Counter> */}
+
+      {/* <button onClick={handleClick}>Click-1</button>
+
+      <button onClick={function handleClick2(){
+        alert('Click-2');
+      }}>Click-2</button>
+
+      <button onClick={handleClick3}>Click-3</button>
+
+      <button onClick={()=>{
+        alert('Click-4');
+      }}>Click-4</button>
+
+      <button onClick={()=>{handleClick5(5)}}>Click-5</button> */}
+
+
+
+
+
+
+      {/* <Library books={books}></Library> */}
 
 
 
